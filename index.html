@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Servicios profesionales de seguridad privada." />
+
+    <title>Seguridad Privada</title>
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-poppins: 'Poppins', sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEeADER -->
+    <header
+      id="header"
+      class="relative z-50 w-full bg-black font-poppins lg:absolute lg:left-0 lg:top-0 lg:bg-transparent"
+    >
+      <!-- HEADER PRINCIPAL -->
+      <div
+        class="mx-auto flex h-[120px] w-full max-w-[1540px] items-center justify-between px-7 sm:px-10 lg:h-[135px] lg:px-0"
+      >
+        <!-- LOGO -->
+        <a href="#inicio" class="relative z-50 flex shrink-0 items-center" aria-label="Ir al inicio">
+          <img
+            src="https://topali.com.mx/wp-content/uploads/2025/02/topali-imagotipo-logo-254x300.png"
+            alt="Logo seguridad privada"
+            class="h-[95px] w-auto object-contain lg:h-[105px]"
+          />
+        </a>
+
+        <!-- MENÚ DESKTOP -->
+        <nav class="hidden items-center lg:flex" aria-label="Navegación principal">
+          <ul class="flex items-center gap-[48px] text-[15px] font-semibold uppercase text-white">
+            <!-- INICIO -->
+            <li>
+              <a href="#inicio" class="text-[#EEB800] transition-colors duration-200 hover:text-[#EEB800]"> Inicio </a>
+            </li>
+
+            <!-- NOSOTROS -->
+            <li>
+              <a href="#nosotros" class="flex items-center gap-2 transition-colors duration-200 hover:text-[#EEB800]">
+                Nosotros
+
+                <svg class="h-[10px] w-[10px] fill-current" viewBox="0 0 320 512" aria-hidden="true">
+                  <path
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <!-- SERVICIOS -->
+            <li>
+              <a href="#servicios" class="flex items-center gap-2 transition-colors duration-200 hover:text-[#EEB800]">
+                Servicios
+
+                <svg class="h-[10px] w-[10px] fill-current" viewBox="0 0 320 512" aria-hidden="true">
+                  <path
+                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <!-- BLOG -->
+            <li>
+              <a href="#blog" class="transition-colors duration-200 hover:text-[#EEB800]"> Blog </a>
+            </li>
+
+            <!-- BOLSA -->
+            <li>
+              <a href="#bolsa-de-trabajo" class="whitespace-nowrap transition-colors duration-200 hover:text-[#EEB800]">
+                Bolsa de trabajo
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- DERECHA DESKTOP -->
+        <div class="hidden items-center gap-8 lg:flex">
+          <!-- CTA -->
+          <a
+            href="#contacto"
+            class="group flex h-[68px] min-w-[300px] items-center justify-center gap-5 rounded-tl-[26px] rounded-br-[26px] bg-[#EEB800] px-7 text-[16px] font-bold uppercase tracking-[0.02em] text-black transition-colors duration-300 hover:bg-[#ffc400]"
+          >
+            <span>Contáctanos ahora</span>
+
+            <span class="text-[27px] font-light transition-transform duration-300 group-hover:translate-x-1"> → </span>
+          </a>
+
+          <!-- TELÉFONO -->
+          <a
+            href="tel:+523318905287"
+            class="whitespace-nowrap text-[21px] font-bold text-[#EEB800] transition-colors duration-200 hover:text-white"
+          >
+            (33) 1890 5287
+          </a>
+        </div>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button
+          id="menu-button"
+          type="button"
+          class="relative z-50 flex h-[52px] w-[52px] flex-col items-center justify-center gap-[6px] lg:hidden"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span class="menu-line block h-[5px] w-[38px] rounded-full bg-[#EEB800] transition-all duration-300"></span>
+
+          <span class="menu-line block h-[5px] w-[38px] rounded-full bg-[#EEB800] transition-all duration-300"></span>
+
+          <span class="menu-line block h-[5px] w-[38px] rounded-full bg-[#EEB800] transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <!-- MENÚ MOBILE -->
+      <nav id="mobile-menu" class="absolute left-0 top-full hidden w-full border-t border-white/10 bg-black lg:hidden">
+        <ul class="flex flex-col px-7 py-5 text-[16px] font-semibold uppercase text-white">
+          <li>
+            <a href="#inicio" class="mobile-link block border-b border-white/10 py-4 text-[#EEB800]"> Inicio </a>
+          </li>
+
+          <li>
+            <a
+              href="#nosotros"
+              class="mobile-link block border-b border-white/10 py-4 transition-colors hover:text-[#EEB800]"
+            >
+              Nosotros
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#servicios"
+              class="mobile-link block border-b border-white/10 py-4 transition-colors hover:text-[#EEB800]"
+            >
+              Servicios
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#blog"
+              class="mobile-link block border-b border-white/10 py-4 transition-colors hover:text-[#EEB800]"
+            >
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#bolsa-de-trabajo"
+              class="mobile-link block border-b border-white/10 py-4 transition-colors hover:text-[#EEB800]"
+            >
+              Bolsa de trabajo
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#contacto"
+              class="mobile-link mt-5 flex min-h-[58px] items-center justify-center rounded-tl-[20px] rounded-br-[20px] bg-[#EEB800] px-5 font-bold text-black"
+            >
+              Contáctanos ahora
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAaIN -->
+    <main>
+      <section
+        id="inicio"
+        class="relative min-h-[700px] overflow-hidden bg-cover bg-center font-poppins text-white"
+        style="background-image: url('https://topali.com.mx/wp-content/uploads/2025/02/fondo-topali-cabecera.webp')"
+      >
+        <div class="mx-auto flex min-h-[700px] w-full max-w-[1140px] flex-col md:flex-row">
+          <!-- ========================================
+         IMAGEN GUARDIAS
+    ========================================= -->
+          <div
+            class="order-2 relative flex h-[520px] w-full items-end justify-center md:order-1 md:h-auto md:w-1/2 md:justify-start"
+          >
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/03/guardias-seguridad-topali-1024x752.webp"
+              alt="Personal de seguridad privada"
+              class="absolute bottom-0 left-1/2 w-[720px] max-w-none -translate-x-1/2 md:left-auto md:right-[-20px] md:w-[760px] md:translate-x-0 lg:w-[820px]"
+            />
+          </div>
+
+          <!-- ========================================
+         CONTENIDO
+    ========================================= -->
+          <div
+            class="order-1 z-10 flex w-full flex-col items-center px-5 pt-7 text-center md:order-2 md:w-1/2 md:items-start md:justify-center md:px-8 md:pt-0 md:text-left"
+          >
+            <!-- Honestidad -->
+            <p class="mb-7 hidden text-[22px] font-normal uppercase text-[#EEB800] md:block">Honestidad y confianza</p>
+
+            <!-- TÍTULO -->
+            <h1
+              class="max-w-[620px] text-[39px] font-extrabold uppercase leading-[1.18] tracking-[-0.02em] sm:text-[44px] md:text-[42px] md:leading-[1.13] lg:text-[48px]"
+            >
+              Los expertos en
+
+              <span class="block text-[#EEB800]"> seguridad privada </span>
+            </h1>
+
+            <!-- Experiencia -->
+            <p
+              class="mt-11 whitespace-nowrap text-[20px] font-semibold uppercase text-white sm:text-[23px] md:mt-8 md:text-[18px] lg:text-[20px]"
+            >
+              Más de 30 años de experiencia
+            </p>
+
+            <!-- CONTAMOS CON -->
+            <p class="mt-8 text-[21px] font-normal uppercase text-[#EEB800] md:mt-5 md:text-[18px] lg:text-[20px]">
+              Contamos con
+            </p>
+
+            <!-- REPSE -->
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/03/repse-logo-topali-blanco.png"
+              alt="REPSE"
+              class="mt-3 w-[145px] md:w-[165px] lg:w-[180px]"
+            />
+
+            <!-- BOTÓN -->
+            <a
+              href="#contacto"
+              class="group mt-10 flex min-h-[72px] items-center justify-center gap-6 rounded-tl-[25px] rounded-br-[25px] bg-[#EEB800] px-7 text-[18px] font-bold uppercase tracking-[0.03em] text-black transition-all duration-300 hover:bg-[#ffc400] sm:min-w-[405px] sm:text-[20px] md:mt-8 md:min-h-[68px] md:min-w-[290px] md:px-6 md:text-[15px] lg:min-w-[315px] lg:text-[16px]"
+            >
+              <span> Contáctanos ahora </span>
+
+              <span class="text-[27px] font-light transition-transform duration-300 group-hover:translate-x-2">
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="bg-white py-0 font-poppins lg:py-20 mt-5">
+        <div
+          class="mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-0 px-[18px] lg:grid-cols-3 lg:gap-[42px] lg:px-0"
+        >
+          <!-- ======================================
+         SEGURIDAD INDUSTRIAL
+    ======================================= -->
+          <article class="relative mb-[5px] pb-[100px] lg:mb-0 lg:pb-[100px]">
+            <a href="#contacto" class="group relative block aspect-[2/3] w-full overflow-hidden">
+              <!-- IMAGEN -->
+              <img
+                src="https://topali.com.mx/wp-content/uploads/2025/03/seguridad-industrial-profesional.webp"
+                alt="Seguridad industrial"
+                class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+
+              <!-- OSCURECIDO -->
+              <div class="absolute inset-0 bg-black/45 transition-colors duration-300 group-hover:bg-black/35"></div>
+
+              <!-- TÍTULO -->
+              <h3
+                class="absolute left-1/2 top-[51%] w-full -translate-x-1/2 -translate-y-1/2 text-center text-[38px] font-semibold uppercase leading-[1.25] text-white sm:text-[42px] lg:top-[66%] lg:text-[29px]"
+              >
+                Seguridad
+                <br />
+                Industrial
+              </h3>
+            </a>
+
+            <!-- ESCUDO -->
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/02/topali-industrial-seguridad-privada.webp"
+              alt="Seguridad industrial"
+              class="absolute bottom-0 left-1/2 z-10 w-[220px] -translate-x-1/2 lg:w-[190px]"
+            />
+          </article>
+
+          <!-- ======================================
+         SEGURIDAD EMPRESARIAL
+    ======================================= -->
+          <article class="relative mb-[5px] pb-[100px] lg:mb-0 lg:pb-[100px]">
+            <a href="#contacto" class="group relative block aspect-[2/3] w-full overflow-hidden">
+              <!-- IMAGEN -->
+              <img
+                src="https://topali.com.mx/wp-content/uploads/2025/02/empresarial.webp"
+                alt="Seguridad empresarial"
+                class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+
+              <!-- OSCURECIDO -->
+              <div class="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/30"></div>
+
+              <!-- TÍTULO -->
+              <h3
+                class="absolute left-1/2 top-[51%] w-full -translate-x-1/2 -translate-y-1/2 text-center text-[38px] font-semibold uppercase leading-[1.25] text-white sm:text-[42px] lg:top-[66%] lg:text-[29px]"
+              >
+                Seguridad
+                <br />
+                Empresarial
+              </h3>
+            </a>
+
+            <!-- ESCUDO -->
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/02/topali-empresarial-seguridad-privada.webp"
+              alt="Seguridad empresarial"
+              class="absolute bottom-0 left-1/2 z-10 w-[220px] -translate-x-1/2 lg:w-[190px]"
+            />
+          </article>
+
+          <!-- ======================================
+         SEGURIDAD RESIDENCIAL
+    ======================================= -->
+          <article class="relative pb-[100px] lg:pb-[100px]">
+            <a href="#contacto" class="group relative block aspect-[2/3] w-full overflow-hidden">
+              <!-- IMAGEN -->
+              <img
+                src="https://topali.com.mx/wp-content/uploads/2025/02/residencial.webp"
+                alt="Seguridad residencial"
+                class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+
+              <!-- OSCURECIDO -->
+              <div class="absolute inset-0 bg-black/15 transition-colors duration-300 group-hover:bg-black/25"></div>
+
+              <!-- TÍTULO -->
+              <h3
+                class="absolute left-1/2 top-[51%] w-full -translate-x-1/2 -translate-y-1/2 text-center text-[38px] font-semibold uppercase leading-[1.25] text-white sm:text-[42px] lg:top-[66%] lg:text-[29px]"
+              >
+                Seguridad
+                <br />
+                Residencial
+              </h3>
+            </a>
+
+            <!-- ESCUDO -->
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/02/topali-residencial-seguridad-privada.webp"
+              alt="Seguridad residencial"
+              class="absolute bottom-0 left-1/2 z-10 w-[220px] -translate-x-1/2 lg:w-[190px]"
+            />
+          </article>
+        </div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <section id="nosotros" class="bg-white font-poppins text-[#7a7a7a]">
+        <div
+          class="mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-0 px-9 py-16 lg:grid-cols-2 lg:gap-10 lg:px-0 lg:py-20"
+        >
+          <!-- ======================================
+         COLUMNA IZQUIERDA
+    ======================================= -->
+          <div>
+            <!-- TEXTO SUPERIOR -->
+            <p
+              class="text-center text-[17px] font-normal uppercase leading-[1.15] text-[#7a7a7a] lg:text-left lg:text-[14px]"
+            >
+              Somos
+              <strong class="font-bold">Topali</strong>, especialistas en
+              <strong class="font-bold"> seguridad privada en Guadalajara </strong>
+            </p>
+
+            <!-- TÍTULO -->
+            <h2
+              class="mt-10 text-center text-[39px] font-extrabold uppercase leading-[1.18] tracking-[-0.02em] text-black sm:text-[46px] lg:mt-7 lg:text-left lg:text-[52px] lg:leading-[1.12]"
+            >
+              Más de
+              <span class="text-[#EEB800]"> 30 años </span>
+              de experiencia
+            </h2>
+
+            <!-- TEXTO PRINCIPAL -->
+            <div
+              class="mt-12 space-y-7 text-[20px] leading-[1.7] lg:mt-9 lg:space-y-5 lg:text-[16px] lg:leading-[1.65]"
+            >
+              <p class="font-semibold">Somos una empresa de seguridad privada con Matriz en Guadalajara, Jalisco.</p>
+
+              <p>
+                Contamos con amplia trayectoria de más de 30 años, ofreciendo un servicio de
+                <strong class="font-semibold"> Seguridad Privada en Guadalajara </strong>
+                destacado por la ética con la que implementamos los procesos de trabajo que desarrollamos con el aval de
+                <strong class="font-semibold"> instituciones especializadas en seguridad. </strong>
+                Eso es posible gracias al enfoque en la capacitación y entrenamiento constante de nuestro personal,
+                pieza clave para dar certeza del servicio de calidad que requiere el resguardo de las personas y su
+                patrimonio.
+              </p>
+
+              <p>
+                Como empresa de servicios de
+                <strong class="font-semibold"> seguridad privada en Guadalajara </strong>, nos hemos trazado como
+                objetivo fundamental, el proporcionar a nuestros clientes tranquilidad y confianza, premisas
+                indispensables en toda relación comercial.
+              </p>
+            </div>
+          </div>
+
+          <!-- ======================================
+         COLUMNA DERECHA
+    ======================================= -->
+          <div class="mt-24 lg:mt-0">
+            <!-- PROPUESTA -->
+            <p class="text-[20px] leading-[1.7] lg:text-[16px] lg:leading-[1.65]">
+              Nuestra propuesta de valor en
+              <strong class="font-semibold"> seguridad privada </strong>
+              es dar certeza de seguridad y protección en cada elemento, herramienta y etapa del proceso, para
+              garantizar la tranquilidad de las personas y la armonía de los espacios.
+            </p>
+
+            <!-- FOTO -->
+            <div class="mt-10 w-full overflow-hidden lg:mt-8">
+              <img
+                src="https://topali.com.mx/wp-content/uploads/2025/02/SEGURIDAD-PRIVADA-EN-GUADALAJARA-TOPALI-scaled-1.jpg"
+                alt="Equipo profesional de seguridad privada"
+                class="h-auto w-full object-cover"
+              />
+            </div>
+
+            <!-- TEXTO ABAJO DE FOTO -->
+            <p class="mt-5 text-[17px] font-semibold italic leading-[1.5] text-[#EEB800] lg:text-[16px]">
+              Personal altamente capacitado para brindar seguridad, tranquilidad y protección en todo momento.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS DETALLE -->
+      <section id="servicios-detalle" class="relative overflow-hidden bg-black font-poppins text-white">
+        <!-- ======================================
+       DECORACIÓN SUPERIOR IZQUIERDA
+  ======================================= -->
+        <div
+          class="pointer-events-none absolute left-[-90px] top-[-20px] h-[270px] w-[370px] opacity-60 md:left-[-40px] md:h-[250px] md:w-[330px]"
+        >
+          <div
+            class="h-full w-full rotate-[12deg] [background:repeating-linear-gradient(8deg,transparent_0px,transparent_8px,#FBB90B_9px,#FBB90B_11px)] [clip-path:polygon(0_0,70%_0,100%_100%,20%_100%)]"
+          ></div>
+        </div>
+
+        <!-- ======================================
+       DECORACIÓN SUPERIOR DERECHA
+       SOLO DESKTOP
+  ======================================= -->
+        <div
+          class="pointer-events-none absolute right-[-70px] top-[-20px] hidden h-[270px] w-[390px] opacity-60 lg:block"
+        >
+          <div
+            class="h-full w-full -rotate-[12deg] [background:repeating-linear-gradient(-8deg,transparent_0px,transparent_8px,#FBB90B_9px,#FBB90B_11px)] [clip-path:polygon(30%_0,100%_0,80%_100%,0_100%)]"
+          ></div>
+        </div>
+
+        <!-- ======================================
+       TÍTULO
+  ======================================= -->
+        <div class="relative z-10 mx-auto max-w-[1140px] px-6 pb-9 pt-20 text-center md:pb-8 md:pt-16">
+          <p class="mb-5 text-[20px] font-medium uppercase text-[#FBB90B] md:text-[17px]">Servicios</p>
+
+          <h2
+            class="mx-auto max-w-[900px] text-[38px] font-bold leading-[1.18] sm:text-[46px] lg:text-[42px] lg:leading-[1.2]"
+          >
+            Brindamos Servicios a la Medida
+
+            <span class="mt-2 block text-[#FBB90B]"> para su Protección y Seguridad </span>
+          </h2>
+        </div>
+
+        <!-- ======================================
+       CARDS
+  ======================================= -->
+        <div
+          class="relative z-10 mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-16 px-7 pb-16 lg:grid-cols-3 lg:gap-6 lg:px-0 lg:pb-20"
+        >
+          <!-- ======================================
+         GUARDIAS INTRAMUROS
+    ======================================= -->
+          <article>
+            <!-- IMAGEN -->
+            <div class="relative aspect-[376/336] w-full overflow-hidden">
+              <img
+                src="https://www.caudilloseguridad.com/wp-content/uploads/2023/06/guardias-intramuros.jpg"
+                alt="Guardias intramuros"
+                class="h-full w-full object-cover"
+              />
+
+              <!-- degradado inferior -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+              <!-- TÍTULO SOBRE IMAGEN -->
+              <h3
+                class="absolute bottom-8 left-1/2 w-full -translate-x-1/2 px-4 text-center text-[30px] font-bold uppercase leading-[1.05] lg:bottom-5 lg:text-[23px]"
+              >
+                Guardias
+
+                <span class="block text-[#FBB90B]"> Intramuros </span>
+              </h3>
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+            <p class="mt-9 text-center text-[21px] leading-[1.7] text-white lg:mt-6 lg:text-[16px] lg:leading-[1.8]">
+              Proveemos
+              <strong class="font-bold"> guardias de seguridad </strong>
+              capacitados en control de acceso de personas, vehículos, mercancías y resguardo de instalaciones.
+            </p>
+          </article>
+
+          <!-- ======================================
+         PATRULLAJE Y SUPERVISIÓN
+    ======================================= -->
+          <article>
+            <!-- IMAGEN -->
+            <div class="relative aspect-[374/336] w-full overflow-hidden">
+              <img
+                src="https://www.caudilloseguridad.com/wp-content/uploads/2023/06/patrullaje.jpg"
+                alt="Patrullaje y supervisión"
+                class="h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+              <h3
+                class="absolute bottom-8 left-1/2 w-full -translate-x-1/2 px-4 text-center text-[30px] font-bold uppercase leading-[1.05] lg:bottom-5 lg:text-[23px]"
+              >
+                Patrullaje
+
+                <span class="block text-[#FBB90B]"> y Supervisión </span>
+              </h3>
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+            <p class="mt-9 text-center text-[21px] leading-[1.7] text-white lg:mt-6 lg:text-[16px] lg:leading-[1.8]">
+              Contamos con vehículos y personal de
+              <strong class="font-bold"> patrullaje y supervisión </strong>
+              24/7 para una acción inmediata o detectar riesgos y áreas vulnerables.
+            </p>
+          </article>
+
+          <!-- ======================================
+         CONSULTORÍA EN SEGURIDAD
+    ======================================= -->
+          <article>
+            <!-- IMAGEN -->
+            <div class="relative aspect-[376/336] w-full overflow-hidden">
+              <img
+                src="https://www.caudilloseguridad.com/wp-content/uploads/2023/06/consultoria.jpg"
+                alt="Consultoría en seguridad"
+                class="h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+              <h3
+                class="absolute bottom-8 left-1/2 w-full -translate-x-1/2 px-4 text-center text-[30px] font-bold uppercase leading-[1.05] lg:bottom-5 lg:text-[23px]"
+              >
+                Consultoría
+
+                <span class="block text-[#FBB90B]"> en Seguridad </span>
+              </h3>
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+            <p class="mt-9 text-center text-[21px] leading-[1.7] text-white lg:mt-6 lg:text-[16px] lg:leading-[1.8]">
+              Nuestro equipo de expertos y
+              <strong class="font-bold"> guardias elite </strong>
+              le brindarán las mejores soluciones de seguridad, detectando riesgos y vulnerabilidades.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA - PLAN DE SEGURIDAD -->
+      <section class="w-full overflow-hidden bg-[#ECECEC] font-poppins">
+        <div class="flex w-full flex-col lg:min-h-[720px] lg:flex-row">
+          <!-- ======================================
+         IMAGEN
+         MOBILE: ARRIBA
+         DESKTOP: DERECHA
+    ======================================= -->
+          <div class="order-1 h-[370px] w-full sm:h-[470px] lg:order-2 lg:h-auto lg:w-1/2">
+            <img
+              src="./assets/images/plan-seguridad.jpg"
+              alt="Servicio profesional de seguridad privada"
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+
+          <!-- ======================================
+         CONTENIDO GRIS
+    ======================================= -->
+          <div
+            class="relative order-2 flex w-full overflow-hidden bg-[#5b6167] px-8 py-16 text-white sm:px-14 lg:order-1 lg:w-1/2 lg:items-center lg:px-[120px] lg:py-20"
+          >
+            <!-- ==================================
+           DECORACIÓN GEOMÉTRICA
+      =================================== -->
+            <svg
+              class="pointer-events-none absolute inset-0 h-full w-full opacity-[0.12]"
+              viewBox="0 0 900 720"
+              fill="none"
+              aria-hidden="true"
+            >
+              <g stroke="white" stroke-width="4">
+                <path d="M92 420L190 477V590L92 647L-6 590V477L92 420Z" />
+                <path d="M292 570L395 629V747L292 806L189 747V629L292 570Z" />
+                <path d="M802 -55L905 4V122L802 181L699 122V4L802 -55Z" />
+              </g>
+            </svg>
+
+            <!-- ==================================
+           TEXTO
+      =================================== -->
+            <div class="relative z-10 mx-auto w-full max-w-[560px] text-center lg:mx-0 lg:text-left">
+              <!-- TEXTO SUPERIOR -->
+              <p class="text-[21px] font-medium uppercase leading-[1.3] text-[#F5B900] lg:text-[17px]">
+                Desarrollamos el plan adecuado
+              </p>
+
+              <!-- TÍTULO -->
+              <h2
+                class="mt-11 text-[41px] font-extrabold uppercase leading-[1.18] tracking-[-0.02em] sm:text-[50px] lg:mt-8 lg:text-[52px] lg:leading-[1.23]"
+              >
+                Para tu
+                <span class="block"> necesidad de </span>
+
+                <span class="mt-2 block text-[#F5B900]">
+                  seguridad
+                  <span class="block">privada</span>
+                </span>
+              </h2>
+
+              <!-- SUBTÍTULO -->
+              <p
+                class="mt-12 text-[20px] font-normal uppercase leading-[1.55] lg:mt-9 lg:max-w-[520px] lg:text-[15px] lg:leading-[1.6]"
+              >
+                Somos Topali, especialistas en
+
+                <strong class="block font-bold lg:inline"> seguridad privada en Guadalajara </strong>
+              </p>
+
+              <!-- BOTÓN -->
+              <a
+                href="#contacto"
+                class="group mx-auto mt-14 flex min-h-[88px] w-full max-w-[440px] items-center justify-center gap-6 rounded-tl-[28px] rounded-br-[28px] bg-[#F5B900] px-7 text-[20px] font-bold uppercase tracking-[0.025em] text-black transition-colors duration-300 hover:bg-[#ffc800] lg:mx-0 lg:mt-10 lg:min-h-[70px] lg:max-w-[315px] lg:text-[15px]"
+              >
+                <span> Contáctanos ahora </span>
+
+                <span class="text-[28px] font-light transition-transform duration-300 group-hover:translate-x-2">
+                  →
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER / CONTACTO -->
+    <footer
+      id="contacto"
+      class="relative overflow-hidden border-t-[3px] border-[#EEB800] bg-[#1B1B1B] font-poppins text-white"
+    >
+      <!-- ======================================
+            DECORACIÓN GEOMÉTRICA
+        ======================================= -->
+      <svg
+        class="pointer-events-none absolute inset-0 h-full w-full opacity-[0.08]"
+        viewBox="0 0 1600 700"
+        fill="none"
+        aria-hidden="true"
+      >
+        <g stroke="white" stroke-width="4">
+          <path d="M40 0V140L140 200L240 140V20" />
+          <path d="M40 140L140 80L240 140" />
+
+          <path d="M40 200V380L140 440L240 380V200" />
+          <path d="M40 380L140 320L240 380" />
+
+          <path d="M230 380V560L330 620L430 560V380" />
+          <path d="M230 560L330 500L430 560" />
+
+          <path d="M420 460V640L520 700L620 640V460" />
+          <path d="M420 640L520 580L620 640" />
+
+          <path d="M760 430V610L860 670L960 610V430" />
+          <path d="M760 610L860 550L960 610" />
+        </g>
+      </svg>
+
+      <!-- ======================================
+            CONTENIDO
+        ======================================= -->
+      <div
+        class="relative z-10 mx-auto grid w-full max-w-[1140px] grid-cols-1 px-8 py-16 lg:grid-cols-[220px_390px_1fr] lg:gap-16 lg:px-0 lg:py-28"
+      >
+        <!-- ======================================
+                LOGO
+            ======================================= -->
+        <div class="flex justify-center lg:justify-start">
+          <a href="#inicio">
+            <img
+              src="https://topali.com.mx/wp-content/uploads/2025/02/topali-imagotipo-logo-254x300.png"
+              alt="Logo seguridad privada"
+              class="w-[170px] sm:w-[190px] lg:w-[170px]"
+            />
+          </a>
+        </div>
+
+        <!-- ======================================
+                INFORMACIÓN
+            ======================================= -->
+        <div class="mt-24 text-center lg:mt-0 lg:text-left">
+          <!-- TÍTULO -->
+          <h2 class="text-[27px] font-extrabold uppercase leading-tight lg:text-[20px]">
+            Seguridad
+
+            <span class="text-[#EEB800]"> Privada </span>
+          </h2>
+
+          <!-- DESCRIPCIÓN -->
+          <p
+            class="mt-10 text-justify text-[19px] font-normal leading-[1.8] text-[#eeeeee] lg:mt-7 lg:text-[14px] lg:leading-[1.7]"
+          >
+            Somos una empresa de seguridad privada en Guadalajara, Jalisco. Contamos con amplia trayectoria de más de 30
+            años, ofreciendo un servicio destacado por la ética con la que implementamos los procesos de trabajo.
+          </p>
+
+          <!-- AVISO -->
+          <a
+            href="#"
+            class="mt-10 inline-block text-[21px] font-semibold text-[#EEB800] transition-colors hover:text-white lg:mt-7 lg:text-[16px]"
+          >
+            Aviso de privacidad
+          </a>
+
+          <!-- TELÉFONO Y CORREO -->
+          <div class="mt-7 flex flex-col items-center gap-1 lg:items-start">
+            <a
+              href="tel:+523318905287"
+              class="text-[28px] font-bold text-[#EEB800] transition-colors hover:text-white lg:text-[20px]"
+            >
+              (33) 1890 5287
+            </a>
+
+            <a
+              href="mailto:contacto@topali.com.mx"
+              class="text-[25px] font-bold text-[#EEB800] transition-colors hover:text-white lg:text-[20px]"
+            >
+              contacto@topali.com.mx
+            </a>
+          </div>
+
+          <!-- FACEBOOK -->
+          <a
+            href="#"
+            target="_blank"
+            aria-label="Facebook"
+            class="mx-auto mt-14 flex h-[64px] w-[64px] items-center justify-center rounded-[6px] bg-[#4267A9] transition-transform duration-300 hover:scale-105 lg:mx-0 lg:mt-10 lg:h-[52px] lg:w-[52px]"
+          >
+            <svg class="h-[33px] w-[33px] fill-white lg:h-[28px] lg:w-[28px]" viewBox="0 0 512 512" aria-hidden="true">
+              <path
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78
+                    90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15
+                    37-96.48 93.67-96.48 27.14 0 55.52 4.84
+                    55.52 4.84v61h-31.28c-30.8 0-40.41
+                    19.12-40.41 38.73V256h68.78l-11
+                    71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- ======================================
+                NAVEGACIÓN
+            ======================================= -->
+        <div class="mt-28 text-center lg:mt-0 lg:text-left">
+          <!-- TÍTULO -->
+          <h2 class="text-[27px] font-extrabold uppercase lg:text-[20px]">
+            <span class="text-[#EEB800]"> Menú </span>
+
+            de navegación
+          </h2>
+
+          <!-- LINKS -->
+          <nav class="mt-14 lg:mt-9">
+            <ul class="flex flex-col gap-9 text-[21px] font-semibold lg:gap-7 lg:text-[16px]">
+              <li>
+                <a href="#inicio" class="text-[#EEB800] transition-colors hover:text-white"> Inicio </a>
+              </li>
+
+              <li>
+                <a href="#nosotros" class="transition-colors hover:text-[#EEB800]"> Nosotros </a>
+              </li>
+
+              <li>
+                <a href="#servicios" class="transition-colors hover:text-[#EEB800]"> Servicios </a>
+              </li>
+
+              <li>
+                <a href="#servicios-detalle" class="transition-colors hover:text-[#EEB800]"> Nuestros servicios </a>
+              </li>
+
+              <li>
+                <a href="#contacto" class="transition-colors hover:text-[#EEB800]"> Contacto </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CRÉDITOS / COPYRIGHT -->
+
+    <div class="bg-black">
+      <div class="relative z-10 mx-auto w-full max-w-[1140px] px-8 lg:px-0">
+        <div class="mt-8 border-t border-white/10 py-8 text-center lg:text-left">
+          <p class="text-xs text-white/50">
+            Sitio desarrollado por
+
+            <a href="https://valentinruiz.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <span class="font-medium text-white/70 transition-colors hover:text-[#EEB800]"> Valentín CodeWorks </span
+              >.
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 bg-[#09090b] py-8 text-center text-sm text-white/60">
+      © 2026 Seguridad Privada
+    </div>
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
